@@ -12,5 +12,6 @@ st.table(df)
 
 if st.button('Say hello'):
   df_add = pd.DataFrame(['asfarga', 'afbtaddddd'], columns=df.columns)
-  notion_df.upload(df_add, url_bd, title="page-title", api_key=api_key)
+  df.append(df_add)
+  notion_df.upload(df, url_bd, title="page-title", api_key=api_key)
   st.table(df)
