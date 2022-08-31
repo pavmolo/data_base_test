@@ -8,4 +8,4 @@ api_key = st.secrets["api_key"]
 df = pd.read_notion(url_bd, api_key=api_key)
 st.dataframe(data=df)
 
-st.write(df)
+st.table(df)
