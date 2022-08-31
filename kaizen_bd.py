@@ -1,3 +1,7 @@
 import streamlit as st
 
-st.write("DB username:", st.secrets["page_url"])
+url_bd = st.secrets["page_url"]
+api_key = st.secrets["api_key"]
+df = pd.read_notion(url_bd, api_key=api_key)
+st.dataframe(data=df)
+
