@@ -1,4 +1,5 @@
 import streamlit as st
+import notion_df
 
 url_bd = st.secrets["page_url"]
 api_key = st.secrets["api_key"]
