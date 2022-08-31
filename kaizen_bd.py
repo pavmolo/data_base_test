@@ -11,5 +11,5 @@ st.dataframe(data=df)
 st.table(df)
 
 if st.button('Say hello'):
-  df.to_notion([1, 2, 3], api_key=api_key)
+  df.to_notion(pd.Series([1, 2, 3]), api_key=api_key)
   st.table(df)
