@@ -9,3 +9,7 @@ df = pd.read_notion(url_bd, api_key=api_key)
 st.dataframe(data=df)
 
 st.table(df)
+
+if st.button('Say hello'):
+  df.to_notion([1, 2, 3], api_key=api_key)
+  st.table(df)
